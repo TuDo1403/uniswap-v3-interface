@@ -9,7 +9,7 @@ import ms from 'ms.macro'
 import { darkTheme } from 'theme/colors'
 
 import { SupportedChainId, SupportedL1ChainId, SupportedL2ChainId } from './chains'
-import { ARBITRUM_LIST, CELO_LIST, OPTIMISM_LIST } from './lists'
+import { ARBITRUM_LIST, CELO_LIST, FUJI_LIST, OPTIMISM_LIST } from './lists'
 
 export const AVERAGE_L1_BLOCK_TIME = ms`12s`
 
@@ -216,6 +216,18 @@ const CHAIN_INFO: ChainInfoMap = {
     logoUrl: celoLogo,
     nativeCurrency: { name: 'Celo', symbol: 'CELO', decimals: 18 },
     defaultListUrl: CELO_LIST,
+  },
+  [SupportedChainId.FUJI]: {
+    networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms`10m`,
+    bridge: 'https://www.portalbridge.com/#/transfer',
+    docs: 'https://docs.avax.network/',
+    explorer: 'https://testnet.snowtrace.io/',
+    infoLink: 'https://info.uniswap.org/#/fuji',
+    label: 'Fuji',
+    logoUrl: celoLogo,
+    nativeCurrency: { name: 'Avax', symbol: 'AVAX', decimals: 18 },
+    defaultListUrl: FUJI_LIST,
   },
 }
 

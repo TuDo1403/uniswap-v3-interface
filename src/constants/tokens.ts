@@ -375,6 +375,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'CELO',
     'Celo native asset'
   ),
+  [SupportedChainId.FUJI]: new Token(
+    SupportedChainId.FUJI,
+    '0xc74f6e5fd0E00f0A30c9B45b46C860080E1208Af',
+    18,
+    'AVAX',
+    'Avax native asset'
+  ),
 }
 
 export function isCelo(chainId: number): chainId is SupportedChainId.CELO | SupportedChainId.CELO_ALFAJORES {
